@@ -1,15 +1,22 @@
+let humanScore = 0;
+let computerScore = 0;
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+
 function getComputerChoice() {
     let randomNumber = Math.random();
 
     if (randomNumber > 0 && randomNumber <= 0.3) {
-        return "Rock";
+        return "rock";
     } else if (randomNumber <= 0.6) {
-        return "Paper"
+        return "paper"
     } else {
-        return "Scissor"
+        return "scissor"
     }
 }
 
 function getHumanChoice() {
-    return prompt("Enter either rock, paper or scissor");
+    let humanChoice = prompt("Enter either rock, paper, or scissor");
+    humanChoice = humanChoice.toLowerCase();
+    return humanChoice;
 }
