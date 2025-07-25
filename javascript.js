@@ -20,3 +20,27 @@ function getHumanChoice() {
     humanChoice = humanChoice.toLowerCase();
     return humanChoice;
 }
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "rock" && computerChoice == "paper") {
+        console.log("You lose! Paper beats rock");
+        computerScore++;
+    } else if (humanChoice == "rock" && computerChoice == "scissor") {
+        console.log("You win! Rock beats scissor")
+        humanScore++;
+    } else if (humanChoice == "paper" && computerChoice == "rock") {
+        console.log("You win! Paper beats rock")
+        humanScore++;
+    } else if (humanChoice == "paper" && computerChoice == "scissor") {
+        console.log("You lose! Scissor beats paper");
+        computerScore++;
+    } else if (humanChoice == "scissor" && computerChoice == "rock") {
+        console.log("You lose! Rock beats scissor");
+        computerScore++;
+    } else if (humanChoice == "scissor" && computerChoice == "paper") {
+        console.log("You win! Scissor beats paper");
+        humanScore++;
+    } else {
+        console.log("It's a tie!")
+    }
+}
